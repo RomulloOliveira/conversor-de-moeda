@@ -1,0 +1,115 @@
+* {
+    font-family: 'Exo 2', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+body {
+
+    background: #A268F8;
+   
+
+}
+
+.logo-animado {
+    width: 300px;
+    height: 250px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+main {
+
+    width: 375px;
+    background: #F4F4F4;
+    border-radius: 20px;
+    margin: 0 auto 40px;
+    padding: 44px 24px 23px;
+}
+
+label {
+    color: #777777;
+    font-weight: 400px;
+    font-size: 14px;
+
+}
+
+select,
+input {
+
+    border-radius: 4px;
+    border: 1px solid #BBBBBB;
+    background: #FFFFFF;
+    height: 48px;
+    width: 100%;
+    appearance: none;
+    margin-bottom: 24px;
+    padding-left: 18px;
+    font-size: 16px;
+    font-weight: 700;
+    color: #555555;
+    cursor: pointer;
+
+}
+button{
+    border-radius: 5px;
+    height: 48px;
+    width: 100%;
+    background: #772FD3;
+    border: none;
+    color: #FFFFFF;
+    font-weight: 700;
+    font-size: 18px;
+    cursor: pointer;
+    
+
+}
+
+button:hover{
+    opacity: 0,8;
+}
+
+button:active{
+    opacity: 0.6;
+}
+
+div{
+    
+    border: 1px solid #772FD3;
+    border-radius: 20px;
+    margin-top: 36px;
+    padding: 12px;
+    display:flex;               /* display:flex, pode escolher a posição dos itens */
+    flex-direction: column;     /*posiciona em colunas */
+    align-items: center;           /*alinha os itens no centro, somente com display flex */
+
+}
+
+.arrow{
+    margin: 15px 0;
+}
+
+.moedas{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;                       /* Gap- distancia todos os itens dentro da box*/
+}
+
+.currency{
+    font-weight: 400px;
+    font-size: 14px;
+    color: #777777;
+    
+}
+
+.currency-value{
+    color: #555555;
+    font-size: 20px;
+    font-weight: bold;
+
+}
+
