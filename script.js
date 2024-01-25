@@ -36,10 +36,31 @@ function convertValues() {
         CurrencyValueToConvert.innerHTML = new Intl.NumberFormat("pt-BR",{
             style: "currency",
             currency :"BRL"}).format(inputCurrencyValue)
-    
+ }
 
+ function changeCurrency(){
+    const currencyName = document.getElementById("currency-name")
+    const currencyImg = document.getElementById("currency-img")
 
-    //console.log(convertedValue)
-}
+    if (chosenCurrency.value == "dolar") {
+        currencyName.innerHTML="Dólar"
+        currencyImg.src ="./assets/Dolar.png"
 
+    }
+    if (chosenCurrency.value == "euro") {
+        currencyName.innerHTML="Euro"
+        currencyImg.src ="./assets/Euro.png"
+
+    }
+    if (chosenCurrency.value == "bitcoin") {
+        currencyName.innerHTML="Bitcoin"
+        currencyImg.src ="./assets/bitcoin.png"
+
+    }
+
+    convertValues()
+
+ }
+ 
+chosenCurrency.addEventListener("change", changeCurrency)
 convertButtom.addEventListener("click", convertValues)
