@@ -1,12 +1,14 @@
 
 const convertButtom = document.querySelector(".convert-button")
 const chosenCurrency = document.querySelector(".chosen-currency")
+const convertFrom = document.querySelector(".convert-from")
 
 function convertValues() {
 
     const inputCurrencyValue = document.querySelector(".input-currency").value
     const CurrencyValueToConvert = document.querySelector(".currency-value-to-convert") // valor em Real
     const currencyValueConverted = document.querySelector(".currency-value") // outras moedas, convertidos
+    
 
 
     const dolarToday = 4.97
@@ -48,6 +50,14 @@ function convertValues() {
     }).format(inputCurrencyValue)
 }
 
+if (convertFrom.value == "dolar") {
+    currencyFrom.innerHTML = new Intl.NumberFormat("en-US", {
+        style: "currency",
+        currency: "USD"
+    }).format(inputCurrencyValue / dolarToday)
+
+}
+
 function changeCurrency() {
     const currencyName = document.getElementById("currency-name")
     const currencyImg = document.getElementById("currency-img")
@@ -67,9 +77,13 @@ function changeCurrency() {
         currencyImg.src = "./assets/bitcoin.png"
 
     }
-    if (chosenCurrency.value == "libra"){
+    if (chosenCurrency.value == "libra") {
         currencyName.innerHTML = "Libra"
         currencyImg.src = "./assets/Libra.png"
+    }
+    if (chosenCurrency.value == "real") {
+        currencyName.innerHTML = "Real "
+        currencyImg.src = "./assets/brasil.png"
     }
 
     convertValues()
